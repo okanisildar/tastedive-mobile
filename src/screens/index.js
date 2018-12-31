@@ -1,8 +1,10 @@
+import React from 'react'
 import { createStackNavigator, createSwitchNavigator, createAppContainer } from 'react-navigation'
 import LoginScreen from './LoginScreen'
 import SplashScreen from './SplashScreen'
 import MainScreen from './MainScreen'
 import backgroundColor from '../constants/theme'
+import Search from '../components/search'
 
 const AuthStack = createStackNavigator(
   {
@@ -20,6 +22,7 @@ const AppStack = createStackNavigator(
       headerStyle: {
         backgroundColor,
       },
+      headerTitle: <Search />
     },
   },
 )
