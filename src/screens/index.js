@@ -3,8 +3,8 @@ import { createStackNavigator, createSwitchNavigator, createAppContainer } from 
 import LoginScreen from './LoginScreen'
 import SplashScreen from './SplashScreen'
 import MainScreen from './MainScreen'
-import backgroundColor from '../constants/theme'
-import Search from '../components/search'
+import { backgroundColor } from '../constants/theme'
+import Search from '../components/searchInput'
 
 const AuthStack = createStackNavigator(
   {

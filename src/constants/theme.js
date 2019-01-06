@@ -1,3 +1,2 @@
-const backgroundColor = '#323c50'
-
-export default backgroundColor
+export const backgroundColor = '#323c50'
+export const searchInputBackground = '#34495e'

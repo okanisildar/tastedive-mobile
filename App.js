@@ -2,7 +2,7 @@ import React from 'react'
 import { View, ActivityIndicator } from 'react-native'
 import Navigation from './src/screens'
 import images from './src/constants/images'
-import backgroundColor from './src/constants/theme'
+import { backgroundColor } from './src/constants/theme'
 import cacheImages from './src/utils/cacheImage'
 
 class App extends React.Component {
