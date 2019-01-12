@@ -1,9 +1,13 @@
-import { searchInputBackground, searchInputTextColor } from '../../constants/theme'
+import { searchInputBackground, searchInputTextColor, hoverIconContainerColor } from '../../constants/theme'
 
 const styles = {
   searchInputContainer: {
     height: 40,
-    width: '90%',
+    width: '100%',
+    marginBottom: 2,
+    borderBottomWidth: 0,
+    marginLeft: 5,
+    marginRight: 5,
   },
   searchInput: {
     backgroundColor: searchInputBackground,
@@ -27,10 +31,25 @@ const styles = {
     minHeight: 30,
     marginTop: 3,
     alignItems: 'center',
+    width: 40,
   },
   iconStyle: {
     color: 'white',
     marginTop: 8,
+    marginLeft: 10,
+  },
+  hoverIconContainerStyle: {
+    backgroundColor: hoverIconContainerColor,
+    height: 40,
+    minHeight: 30,
+    marginTop: 3,
+    alignItems: 'center',
+    width: 40,
+  },
+  logoStyle: {
+    marginRight: 10, 
+    marginLeft: 5, 
+    width: '20%', 
   },
 }
 
