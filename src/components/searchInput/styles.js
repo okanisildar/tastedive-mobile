@@ -47,9 +47,9 @@ const styles = {
     width: 40,
   },
   logoStyle: {
-    marginRight: 10, 
-    marginLeft: 5, 
-    width: '20%', 
+    marginRight: 10,
+    marginLeft: 5,
+    width: '20%',
   },
 }
 

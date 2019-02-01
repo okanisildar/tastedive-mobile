@@ -1,4 +1,5 @@
-export const backgroundColor = '#323c50'
+export const headerBackgroundColor = '#323c50'
+export const contentBackgroundColor = '#e0e6eb'
 export const searchInputBackground = '#34495e'
 export const searchInputTextColor = '#6c7072'
 export const hoverIconContainerColor = '#1bbc9b'

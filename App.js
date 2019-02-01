@@ -2,7 +2,7 @@ import React from 'react'
 import { View, ActivityIndicator } from 'react-native'
 import Navigation from './src/screens'
 import images from './src/constants/images'
-import { backgroundColor } from './src/constants/theme'
+import { headerBackgroundColor } from './src/constants/theme'
 import cacheImages from './src/utils/cacheImage'
 
 class App extends React.Component {
@@ -30,7 +30,7 @@ class App extends React.Component {
       )
     }
     return (
-      <View style={{ flex: 1, backgroundColor }}>
+      <View style={{ flex: 1, headerBackgroundColor }}>
         <Navigation />
       </View>
     )
