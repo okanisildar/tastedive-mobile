@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
 import { View, Text } from 'react-native'
+import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
 import styles from './styles'
-import callApi from '../../api'
+import * as actions from '../../actions'
 
 class Main extends Component {
-  state = {}
-
-  componentDidMount() {
-    callApi()
+  componentDidMount = async () => {
+    const { getAll } = this.props
+    await getAll()
   }
 
   render() {
@@ -19,4 +20,12 @@ class Main extends Component {
   }
 }
 
-export default Main
+Main.propTypes = {
+  getAll: PropTypes.func.isRequired,
+}
+
+const mapStateToProps = ({ allKind }) => ({
+  all: allKind,
+})
+
+export default connect(mapStateToProps, actions)(Main)
