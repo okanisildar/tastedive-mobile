@@ -2,8 +2,9 @@ import axios from 'axios'
 
 const apiUrl = 'https://tastedive.com/api/similar?'
 
-const callApi = (params = '', method = 'get') => {
-  const url = `${apiUrl}q=${params}`
+
+const callApi = (q = 'muse', method = 'get', info = 1, type = '', limit = 20) => {
+  const url = `${apiUrl}k=${apiKey}&type=${type}&limit=${limit}&info=${info}&q=${q}`
 
   return new Promise(async (resolve, reject) => {
     try {

@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux'
-import allKind from './AllKind'
+import all from './AllKind'
 
 const rootReducer = combineReducers({
-  allKind,
+  all,
 })
 
 export default rootReducer
