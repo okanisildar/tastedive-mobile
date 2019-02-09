@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, Text } from 'react-native'
+import { View, ActivityIndicator } from 'react-native'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import styles from './styles'
@@ -13,9 +13,13 @@ class Main extends Component {
   }
 
   render() {
+    const { all } = this.props
     return (
       <View style={styles.container}>
-        <ListItem />
+        {all
+          ? all.map(item => <ListItem key={item.yID} item={item} />)
+          : <ActivityIndicator size="large" />
+        }
       </View>
     )
   }
@@ -23,10 +27,15 @@ class Main extends Component {
 
 Main.propTypes = {
   getAll: PropTypes.func.isRequired,
+  all: PropTypes.arrayOf(Object),
 }
 
-const mapStateToProps = ({ all }) => ({
-  all,
+Main.defaultProps = {
+  all: [],
+}
+
+const mapStateToProps = ({ allKind }) => ({
+  all: allKind.all,
 })
 
 export default connect(mapStateToProps, actions)(Main)

@@ -1,9 +1,10 @@
 import React from 'react'
 import { View, Text } from 'react-native'
+import PropTypes from 'prop-types'
 import { Icon } from 'native-base'
 import styles from './styles'
 
-const ListItem = () => {
+const ListItem = ({ item }) => {
   const {
     container,
     titleWrapper,
@@ -12,16 +13,17 @@ const ListItem = () => {
     subText,
     textContainer,
     likeButtonContainer,
-    icon
+    icon,
   } = styles
+  const { Name, Type } = item
   return (
     <View style={container}>
       <View style={textContainer}>
         <View style={titleWrapper}>
-          <Text style={titleText}>asd</Text>
+          <Text style={titleText}>{Name}</Text>
         </View>
         <View style={subTextWrapper}>
-          <Text style={subText}>asd</Text>
+          <Text style={subText}>{Type}</Text>
         </View>
       </View>
       <View style={likeButtonContainer}>
@@ -33,6 +35,14 @@ const ListItem = () => {
       </View>
     </View>
   )
+}
+
+ListItem.propTypes = {
+  item: PropTypes.instanceOf(Object),
+}
+
+ListItem.defaultProps = {
+  item: {},
 }
 
 export default ListItem
