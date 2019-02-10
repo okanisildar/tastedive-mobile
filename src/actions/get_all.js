@@ -1,11 +1,12 @@
 import callApi from '../api'
 import actionTypes from '../constants/actions'
 
-export const getAll = () => (dispatch) => {
+export const getAll = (params = '') => (dispatch) => {
+  console.log(params)
   dispatch({
     type: actionTypes.loading_started,
   })
-  callApi()
+  callApi(params)
     .then((response) => {
       dispatch({
         type: actionTypes.get_all,

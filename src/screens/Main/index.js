@@ -9,7 +9,7 @@ import ListItem from '../../components/listItem'
 class Main extends Component {
   componentDidMount = async () => {
     const { getAll } = this.props
-    await getAll()
+    //await getAll()
   }
 
   render() {

@@ -20,7 +20,13 @@ const ListItem = ({ item }) => {
     <View style={container}>
       <View style={textContainer}>
         <View style={titleWrapper}>
-          <Text style={titleText}>{Name}</Text>
+          <Text
+            numberOfLines={1}
+            ellipsizeMode="tail"
+            style={titleText}
+          >
+            {Name}
+          </Text>
         </View>
         <View style={subTextWrapper}>
           <Text style={subText}>{Type}</Text>

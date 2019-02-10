@@ -1,14 +1,18 @@
 import React, { Component } from 'react'
 import { View, Image } from 'react-native'
 import { Item, Input, Icon } from 'native-base'
+import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
 import images from '../../constants/images'
 import styles from './styles'
 import { searchInputTextColor } from '../../constants/theme'
+import * as actions from '../../actions'
 
 class Search extends Component {
   state = {
     searchInputStyle: styles.searchInput,
     iconContainerStyle: styles.iconContainerStyle,
+    params: '',
   }
 
   onFocus = () => {
@@ -24,6 +28,16 @@ class Search extends Component {
     })
   }
 
+  onPress = () => {
+    const { params } = this.state
+    const { getAll } = this.props
+    getAll(params)
+  }
+
+  onChangeHandler = (e) => {
+    this.setState({ params: e })
+  }
+
   render() {
     const { searchInputStyle, iconContainerStyle } = this.state
     const { searchInputContainer, iconStyle, logoStyle } = styles
@@ -31,6 +45,7 @@ class Search extends Component {
       <Item style={searchInputContainer}>
         <Image source={images.logo} style={logoStyle} resizeMode="contain" />
         <Input
+          onChangeText={e => this.onChangeHandler(e)}
           onBlur={() => this.onBlur()}
           onFocus={() => this.onFocus()}
           style={searchInputStyle}
@@ -39,6 +54,7 @@ class Search extends Component {
         />
         <View style={iconContainerStyle}>
           <Icon
+            onPress={this.onPress}
             style={iconStyle}
             type="Ionicons"
             name="ios-search"
@@ -49,4 +65,8 @@ class Search extends Component {
   }
 }
 
-export default Search
+Search.propTypes = {
+  getAll: PropTypes.func.isRequired,
+}
+
+export default connect(null, actions)(Search)
