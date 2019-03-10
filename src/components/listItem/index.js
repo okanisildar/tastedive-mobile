@@ -5,6 +5,7 @@ import { Icon } from 'native-base'
 import styles from './styles'
 
 const ListItem = ({ item }) => {
+  console.log(item)
   const {
     container,
     titleWrapper,

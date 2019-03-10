@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, ActivityIndicator } from 'react-native'
+import { View, ActivityIndicator, FlatList } from 'react-native'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import styles from './styles'
@@ -12,12 +12,22 @@ class Main extends Component {
     //await getAll()
   }
 
+  renderItem = ({ item }) => (
+    <ListItem item={item} />
+  )
+
   render() {
     const { all } = this.props
     return (
       <View style={styles.container}>
         {all
-          ? all.map(item => <ListItem key={item.yID} item={item} />)
+          ? (
+            <FlatList
+              data={all}
+              keyExtractor={item => item.yID}
+              renderItem={this.renderItem}
+            />
+          )
           : <ActivityIndicator size="large" />
         }
       </View>
