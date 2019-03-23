@@ -2,7 +2,6 @@ import callApi from '../api'
 import actionTypes from '../constants/actions'
 
 export const getAll = (params = '') => (dispatch) => {
-  console.log(params)
   dispatch({
     type: actionTypes.loading_started,
   })

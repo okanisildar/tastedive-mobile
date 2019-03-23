@@ -12,7 +12,9 @@ class Search extends Component {
   state = {
     searchInputStyle: styles.searchInput,
     iconContainerStyle: styles.iconContainerStyle,
-    params: '',
+    params: {
+      q: '',
+    },
   }
 
   onFocus = () => {
@@ -29,13 +31,17 @@ class Search extends Component {
   }
 
   onPress = () => {
-    const { params } = this.state
+    const { q } = this.state.params
     const { getAll } = this.props
-    getAll(params)
+    getAll({ q })
   }
 
   onChangeHandler = (e) => {
-    this.setState({ params: e })
+    this.setState({
+      params: {
+        q: e,
+      },
+    })
   }
 
   render() {
