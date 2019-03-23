@@ -1,10 +1,10 @@
 import axios from 'axios'
 
 const apiUrl = 'https://tastedive.com/api/similar?'
-const apiKey = ''
+const apiKey = '322571-TasteDiv-W3HBTXNH'
 
 const callApi = ({
-  q = '', method = 'get', info = 1, type = '', limit = 1,
+  q = '', method = 'get', info = 1, type = '', limit = 10,
 }) => {
   const url = `${apiUrl}k=${apiKey}&type=${type}&limit=${limit}&info=${info}&q=${q}`
   return new Promise(async (resolve, reject) => {

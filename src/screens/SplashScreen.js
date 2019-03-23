@@ -8,11 +8,6 @@ class Splash extends Component {
   state = {}
 
   componentDidMount() {
-    // Temporary until I have real login
-    this.checkAuth()
-  }
-
-  checkAuth = () => {
     const { navigation } = this.props
     setTimeout(() => {
       navigation.navigate('Main')

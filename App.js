@@ -31,7 +31,7 @@ class App extends React.Component {
     if (!isReady) {
       return (
         <View style={{ flex: 1, backgroundColor: headerBackgroundColor }}>
-          <ActivityIndicator size="large" />
+          <ActivityIndicator style={{ flex: 1 }} size="large" />
         </View>
       )
     }
