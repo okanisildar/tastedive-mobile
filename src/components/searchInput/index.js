@@ -31,7 +31,8 @@ class Search extends Component {
   }
 
   onPress = () => {
-    const { q } = this.state.params
+    const { params } = this.state
+    const { q } = params
     const { getAll } = this.props
     getAll({ q })
   }

@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const apiUrl = 'https://tastedive.com/api/similar?'
-
+const apiKey = ''
 
 const callApi = ({
   q = '', method = 'get', info = 1, type = '', limit = 1,
