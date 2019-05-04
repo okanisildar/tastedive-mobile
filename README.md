@@ -9,7 +9,11 @@ Only tested on IOS platform.
 
 # Screenhots
 
-
+<div>
+  <img src="https://github.com/okanisildur/tastedive-mobile/blob/master/screenshots/Simulator%20Screen%20Shot%20-%20iPhone%20X%20-%202019-05-04%20at%2016.27.50.png" width="25%"height="25%" alt="iPhone X" />
+  <img src="https://github.com/okanisildur/tastedive-mobile/blob/master/screenshots/Simulator%20Screen%20Shot%20-%20iPhone%208%20-%202019-05-04%20at%2016.14.59.png" width="25%"height="25%"/>
+  <img src="https://github.com/okanisildur/tastedive-mobile/blob/master/screenshots/Simulator%20Screen%20Shot%20-%20iPhone%208%20-%202019-05-04%20at%2016.15.10.png" width="25%"height="25%"/>
+</div>
 
 ## Available Scripts
 
